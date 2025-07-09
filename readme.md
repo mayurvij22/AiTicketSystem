@@ -157,57 +157,7 @@ A smart ticket management system that uses AI to automatically categorize, prior
 
    This will start the Inngest development server at http://localhost:8288
 
-2. **Test Ticket Creation**
-   ```bash
-   curl -X POST http://localhost:3000/api/tickets \
-   -H "Content-Type: application/json" \
-   -H "Authorization: Bearer YOUR_JWT_TOKEN" \
-   -d '{
-     "title": "Database Connection Issue",
-     "description": "Experiencing intermittent database connection timeouts"
-   }'
-   ```
 
-## 🔍 Troubleshooting
-
-### Common Issues
-
-1. **Port Conflicts**
-   If you see "address already in use" error:
-
-   ```bash
-   # Find process using port 8288
-   lsof -i :8288
-   # Kill the process
-   kill -9 <PID>
-   ```
-
-2. **AI Processing Errors**
-
-   - Verify GEMINI_API_KEY in .env
-   - Check API quota and limits
-   - Validate request format
-
-3. **Email Issues**
-   - Verify Mailtrap credentials
-   - Check SMTP settings
-   - Monitor email delivery logs
-
-## 📚 Dependencies
-
-- `@inngest/agent-kit`: ^0.7.3
-- `bcrypt`: ^5.1.1
-- `cors`: ^2.8.5
-- `dotenv`: ^16.5.0
-- `express`: ^5.1.0
-- `inngest`: ^3.35.0
-- `jsonwebtoken`: ^9.0.2
-- `mongoose`: ^8.13.2
-- `nodemailer`: ^6.10.1
-
-## 🤝 Contributing
-
-we don't accept contributions for this project, as this is a part of a video and code files needs to given as it is.
 
 ## 🙏 Acknowledgments
 
